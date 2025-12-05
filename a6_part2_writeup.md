@@ -47,16 +47,16 @@ What was your model's R² score? What does this tell you about how well your mod
 If you could add TWO more features to improve your house price predictions, what would they be and why?
 
 **Feature 1:**
-
+I would add type of house like modern or medieval
 
 **Why it would help:**
-
+These would add more depth to the price range it would also depend on the person.
 
 **Feature 2:**
-
+Floors
 
 **Why it would help:**
-
+It could also add more depth to the prpiceing range and this data could help with the style of the house data.
 
 ---
 
@@ -64,6 +64,6 @@ If you could add TWO more features to improve your house price predictions, what
 
 Would you trust this model to predict the price of a house with 6 bedrooms, 4 bathrooms, 3000 sq ft, and 5 years old? Why or why not? (Hint: Think about the range of your training data)
 
-**YOUR ANSWER:**
+**YOUR ANSWER:** All of the data coefficients you have given me are above my data set range so my model will have a hard time predicting the price of the house.
 
 
