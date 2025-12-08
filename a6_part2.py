@@ -82,19 +82,18 @@ def visualize_features(data):
     #       - scatter plot, color='orange', alpha=0.6
     #       - labels and title
     #       - grid
-    axes[1, 0].scatter(data['Age'], data['Price'], color='yellow', alpha=0.6)
-    axes[1, 0].set_xlabel('Age')
-    axes[1, 0].set_ylabel('Price ($)')
-    axes[1, 0].set_title('Age vs Price')
-    axes[1, 0].grid(True, alpha=0.3)
+    axes[1, 1].scatter(data['Age'], data['Price'], color='yellow', alpha=0.6)
+    axes[1, 1].set_xlabel('Age')
+    axes[1, 1].set_ylabel('Price ($)')
+    axes[1, 1].set_title('Age vs Price')
+    axes[1, 1].grid(True, alpha=0.3)
     # TODO: Use plt.tight_layout() to make plots fit nicely
     plt.tight_layout()
     # TODO: Save the figure as 'feature_plots.png' with dpi=300
     plt.savefig('house_features.png', dpi=300, bbox_inches='tight')
     print("\n✓ Feature plots saved as 'house_features.png'")
     # TODO: Show the plot
-    plt.show
-
+    plt.show()
 
 def prepare_features(data):
     """
@@ -268,8 +267,9 @@ def make_prediction(model, sqft, bedrooms, bathrooms, age):
     """
     # TODO: Create a DataFrame with the house features
     #       columns should be: ['SquareFeet', 'Bedrooms', 'Bathrooms', 'Age']
-    house_features = pd.DataFrame([['SquareFeet', 'Bedrooms', 'Bathrooms', 'Age']], 
+    house_features = pd.DataFrame([[sqft, bedrooms, bathrooms, age]], 
                                  columns=['SquareFeet', 'Bedrooms', 'Bathrooms', 'Age'])
+    print(house_features)
     # TODO: Make a prediction using model.predict()
     predicted_price = model.predict(house_features)[0]
     # TODO: Print the house specs and predicted price nicely formatted
@@ -290,10 +290,10 @@ if __name__ == "__main__":
     data = load_and_explore_data('house_prices.csv')
     # Step 2: Visualize features
     # TODO: Call visualize_features() with the data
-    X, y = prepare_features(data)
+    visualize_features(data)
     # Step 3: Prepare features
     # TODO: Call prepare_features() and store X and y
-    prepare_features(data)
+    X, y = prepare_features(data)
     # Step 4: Split data
     # TODO: Call split_data() and store X_train, X_test, y_train, y_test
     X_train, X_test, y_train, y_test = split_data(X, y)
@@ -308,7 +308,7 @@ if __name__ == "__main__":
     compare_predictions(y_test, predictions)
     # Step 8: Make a new prediction
     # TODO: Call make_prediction() for a house of your choice
-    make_prediction(model, 1900, 4, 5, 7)  
+    make_prediction(model, 1900, 2, 2, 7)  
     print("\n" + "=" * 70)
     print("✓ Assignment complete! Check your saved plots.")
     print("Don't forget to complete a6_part2_writeup.md!")

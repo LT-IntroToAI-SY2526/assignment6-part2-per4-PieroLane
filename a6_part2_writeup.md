@@ -7,13 +7,13 @@
 Based on your house price model, rank the four features from most important to least important. Explain how you determined this ranking.
 
 **YOUR ANSWER:**
-1. Most Important: 
-2. 
-3. 
-4. Least Important: 
+1. Most Important: Bedrooms
+2. Bathrooms
+3. Age
+4. Least Important: Squarefeet
 
 **Explanation:**
-
+They are ranked by the straightness of a potential line and the correlation betweetn the coefficient and price. It also determines the bigger change in the pricing range.
 
 
 
@@ -24,10 +24,10 @@ Based on your house price model, rank the four features from most important to l
 Choose TWO features from your model and explain what their coefficients mean in plain English. For example: "Each additional bedroom increases the price by $___"
 
 **Feature 1:**
-
+Each addional bedroom increases the price by $6648.97.
 
 **Feature 2:**
-
+For every square foot, the price increases by $121.11.
 
 ---
 
@@ -35,7 +35,7 @@ Choose TWO features from your model and explain what their coefficients mean in 
 
 What was your model's R² score? What does this tell you about how well your model predicts house prices? Is there room for improvement?
 
-**YOUR ANSWER:**
+**YOUR ANSWER:**99.36 means it accounted for 99.36 percent of the variation. I think there is a little bit of rom for improvement.
 
 
 
